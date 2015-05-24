@@ -154,9 +154,10 @@ dl.adr dd {white-space:nowrap; color:#292929;}
 dl.adr dd a {}
 dl.adr dd a:hover {}
 #form { margin: 19px 0 0px 0px; width:630px; }
-#form input {border:#e4e4e4 1px solid; background:#e4e4e4; font-size:14px; font-family:"Times New Roman", Times, serif; color:#292929; padding:3px 10px 5px 10px;outline: medium none;width:536px; height:17px; float:left;}
+#form input {border:#e4e4e4 1px solid; background:#e4e4e4; font-size:14px; font-family:"Times New Roman", Times, serif; color:#292929; padding:3px 10px 5px 10px;outline: medium none;width:338px; height:17px; float:left;}
 #form textarea {border:#e4e4e4 1px solid; background:#e4e4e4;font-size:14px; font-family:"Times New Roman", Times, serif; color:#292929; height:127px;outline: medium none;overflow: auto; padding: 3px 0px 0px 10px; width: 546px;resize:none;margin:0px 0 0 0;float:left;}
 #form label {position:relative;display: block;min-height:36px;}
-.btns {text-align:right; overflow:hidden; width:630px;}
+.btns {text-align:right; overflow:hidden; width:430px;}
 .btns a {display:inline-block; margin:7px 0px 0 22px;}
+.btns input {height:40px}
 #form label strong {float:left; text-align:right; display:block; padding-top:5px; line-height:18px; width:58px; font-weight:normal; margin-right:12px; white-space:nowrap; color:#b5b5b5;} 

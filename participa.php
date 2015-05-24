@@ -1,3 +1,34 @@
+<?php 
+if(isset($_POST["nombre"])){
+	
+}
+/*
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+ */
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,8 +37,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/grid_24.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <!-- 
     <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+     -->
     <script src="js/jquery-1.7.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
 	<!--[if lt IE 8]>
@@ -46,12 +79,24 @@
                     <h4 class="h4-border">
                     	<img src="images/pentagrama.png" alt="" style="margin:-15px 10px 0 10px"> La música:
                     </h4>
-                    <form name="formulario" method="post" action="ejemploPost.php">
-					Tu nombre: <input type="text" name="nombre" value="">
-					Nombre canción: <input type="text" name="cancion" value="">
-					Nombre artista: <input type="text" name="artista" value="">
-					<input type="submit" />
-					</form>
+                    <form id="form" method="post">
+                      <fieldset>
+                        <label><strong>Tu nombre:</strong><input type="text" value="" name="nombre"><strong class="clear"></strong></label>
+                        <label><strong>Canción:</strong><input type="text" value="" name="cancion"><strong class="clear"></strong></label>
+                        <label><strong>Artista:</strong><input type="text" value="" name="artista"><strong class="clear"></strong></label>
+                        <strong class="clear"></strong>
+                        <div class="btns">
+                        	<a href="#" class="link" id="enviar_musica">Enviar</a>
+                        </div>
+                        <script>
+	                        $( document ).ready(function() {
+	                            $("#enviar_musica").click(function() {
+	                            	$("#form").submit();
+	                            });
+	                        });
+                        </script>
+                      </fieldset>  
+                    </form> 
 				</div>
     		</div>  
             <div class="grid_1">
@@ -61,7 +106,24 @@
             	<div class="top-1">
                     <h4 class="h4-border">
                     	<img src="images/cubata.png" alt="" style="margin:-15px 10px 0 10px"> <strong>La bebida:</strong>
-                    	</h4>
+                    </h4>
+                    <form id="form" method="post">
+                      <fieldset>
+                        <label><strong>Tu nombre:</strong><input type="text" value="" name="nombre"><strong class="clear"></strong></label>
+                        <label><strong>Bebida:</strong><input type="text" value="" name="cancion"><strong class="clear"></strong></label>
+                        <strong class="clear"></strong>
+                        <div class="btns">
+                        	<a href="#" class="link" id="enviar_musica">Enviar</a>
+                        </div>
+                        <script>
+	                        $( document ).ready(function() {
+	                            $("#enviar_musica").click(function() {
+	                            	$("#form").submit();
+	                            });
+	                        });
+                        </script>
+                      </fieldset>  
+                    </form> 
                 </div>
             </div>        
             <div class="clear"></div>
